@@ -10,3 +10,4 @@ class AdminUser(UserAdmin):
     exclude = ("password",)
     readonly_fields = ("last_login", "date_joined")
     filter_horizontal = ()
+
