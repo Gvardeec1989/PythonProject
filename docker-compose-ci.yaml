@@ -27,7 +27,7 @@ services:
       
   migrations:
 
-   image: Gvardeec1989/todo:${GITHUB_REF_NAME}-${GITHUB_RUN_ID}
+   image: akuchin89/deploy:${GITHUB_REF_NAME}-${GITHUB_RUN_ID}
    env_file:
      - ./.env
    environment:
@@ -50,7 +50,7 @@ services:
   
   api:
 
-    image: Gvardeec1989/todo:${GITHUB_REF_NAME}-${GITHUB_RUN_ID}
+    image: akuchin89/deploy:${GITHUB_REF_NAME}-${GITHUB_RUN_ID}
     restart: always
     depends_on:
       postgres:
