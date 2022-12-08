@@ -109,3 +109,4 @@ jobs:
           script: |
             cd app
             docker compose up -d
+
