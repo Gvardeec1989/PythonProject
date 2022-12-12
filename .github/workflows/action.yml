@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: clone code
-        uses: actions/checkout@v3
+        uses: action/checkout@v3
       - name: docker build
         run: docker build -t akuchin89/todolist:$GITHUB_REF_NAME-$GITHUB_RUN_ID .
       - name: login to Docker hub
@@ -32,7 +32,7 @@ jobs:
 #      SOCIAL_AUTH_VK_OAUTH2_SECRET: ${{ secrets.SOCIAL_AUTH_VK_OAUTH2_SECRET }}
     steps:
       - name: clone code
-        uses: actions/checkout@v3
+        uses: action/checkout@v3
       - name: render configs
         run: |
           mkdir deploy
