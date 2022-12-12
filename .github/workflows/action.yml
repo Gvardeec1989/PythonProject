@@ -3,7 +3,7 @@ name: Build_and_deploy_action
 on:
   push:
     branches:
-      - master
+      - origin
 jobs:
   build_and_push:
     runs-on: ubuntu-latest
