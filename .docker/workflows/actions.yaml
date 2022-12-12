@@ -96,7 +96,7 @@ jobs:
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
-          key: ${{ secrets.SSH_KEY }}
+          key: ${{ secrets.SSH_PASSWORD }}
           source: "deploy/docker-compose.yaml,deploy/.docker_env"
           target: "app"
           strip_components: 1
@@ -105,7 +105,7 @@ jobs:
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
-          key: ${{ secrets.SSH_KEY }}
+          key: ${{ secrets.SSH_PASSWORD }}
           script: |
             cd app
             docker compose up -d
