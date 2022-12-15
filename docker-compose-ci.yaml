@@ -37,8 +37,6 @@ services:
      POSTGRES_USER: ${DOCKERHUB_USERNAME}
      POSTGRES_PASSWORD: ${DOCKERHUB_TOKEN}
      POSTGRES_DB: ${POSTGRES_DB}
-     VK_OAUTH2_KEY: "${VK_OAUTH2_KEY}"
-     VK_OAUTH2_SECRET: "${VK_OAUTH2_SECRET}"
    depends_on:
      postgres:
        condition: service_healthy
@@ -64,8 +62,6 @@ services:
       POSTGRES_USER: ${DOCKERHUB_USERNAME}
       POSTGRES_PASSWORD: ${DOCKERHUB_TOKEN}
       POSTGRES_DB: ${POSTGRES_DB}
-      VK_OAUTH2_KEY: "${VK_OAUTH2_KEY}"
-      VK_OAUTH2_SECRET: "${VK_OAUTH2_SECRET}"
     command: python manage.py runserver 0.0.0.0:8000
     ports:
       - "8000:8000"
