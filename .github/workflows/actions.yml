@@ -41,3 +41,13 @@ jobs:
           target: todolist
           strip_components: 1
 
+      - name: Run compose
+          uses: appleboy/ssh-action@master
+          with:
+            host: ${{ secrets.SSH_HOST }}
+            username: ${{ secrets.secrets.SSH_USER }}
+            password: ${{ secrets.secrets.SSH_PASSWORD }}
+            script: |
+              cd todolist
+              echo ${{ secrets.SSH_PASSWORD }} | sudo -S docker-compose up -d
+
