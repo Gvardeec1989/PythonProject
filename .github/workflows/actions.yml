@@ -1,4 +1,3 @@
-docker login repository_details
 name: Bild and deploy workflow
 on: [push]
 jobs:
