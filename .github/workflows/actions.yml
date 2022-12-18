@@ -42,11 +42,11 @@ jobs:
           target: todolist
           strip_components: 1
       - name: run docker-compose
-          uses: appleboy/ssh-action@master
-          with:
-            host: ${{ SSH_HOST }}
-            username: ${{ secrets.SSH_USER }}
-            password: ${{ secrets.SSH_PASSWORD }}
-            script: |
-              cd flask-app
-              echo ${{ secrets.SSH_PASSWORD }} | sudo -S docker-compose up -d
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          script: |
+            cd flask-app
+            echo ${{ secrets.SSH_PASSWORD }} | sudo -S docker-compose up -d
