@@ -48,5 +48,5 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PASSWORD }}
           script: |
-            cd flask-app
+            cd todolist
             echo ${{ secrets.SSH_PASSWORD }} | sudo -S docker-compose up -d
