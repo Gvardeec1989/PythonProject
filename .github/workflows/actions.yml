@@ -44,8 +44,10 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          password: ${{ secrets.SSH_PASSWORD }}
-          script: |
-            cd todolist
-            echo ${{ secrets.SSH_PASSWORD }} | sudo -S docker-compose up -d
+            username: ${{ secrets.SSH_USER }}
+            password: ${{ secrets.SSH_PASSWORD }}
+            script: |
+              cd todolist
+              docker-compose pull
+              docker-compose up -d
+              docker system prune -a -f
