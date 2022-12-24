@@ -62,7 +62,7 @@ services:
       POSTGRES_USER: ${DOCKERHUB_USERNAME}
       POSTGRES_PASSWORD: ${DOCKERHUB_TOKEN}
       POSTGRES_DB: ${POSTGRES_DB}
-    command: python manage.py runserver 0.0.0.0:8080
+    command: python manage.py runserver 0.0.0.0:80
     ports:
       - "8000:8000"
     networks:
