@@ -27,7 +27,7 @@ services:
       
   migrations:
 
-   image: akuchin89/deploy:${GITHUB_REF_NAME}-${GITHUB_RUN_ID}
+   image: akuchin89/pythonprojectnew:${GITHUB_REF_NAME}-${GITHUB_RUN_ID}
    env_file:
      - ./.env
    environment:
@@ -48,7 +48,7 @@ services:
   
   api:
 
-    image: akuchin89/deploy:${GITHUB_REF_NAME}-${GITHUB_RUN_ID}
+    image: akuchin89/pythonprojectnew:${GITHUB_REF_NAME}-${GITHUB_RUN_ID}
     restart: always
     depends_on:
       postgres:
